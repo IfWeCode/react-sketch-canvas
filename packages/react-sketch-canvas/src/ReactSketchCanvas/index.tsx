@@ -47,7 +47,7 @@ export const ReactSketchCanvas = React.forwardRef<
     readOnly = false,
   } = props;
 
-  const svgCanvas = React.createRef<CanvasRef>();
+  const svgCanvas = React.useRef<CanvasRef>(null);
   const [drawMode, setDrawMode] = React.useState<boolean>(true);
   const [isDrawing, setIsDrawing] = React.useState<boolean>(false);
   const [resetStack, setResetStack] = React.useState<CanvasPath[]>([]);
